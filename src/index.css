@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  background-image: url(./assets/bg-cafe.jpg);
+  background-color: #121315;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 0.5em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h1 + p {
+  color: #6F757C;
+}
+
+h2 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+}
+
+button.active {
+  background-color: #6F757C;
+
+}
+
+h1, h2, .rating, button {
+  color: #FEF7EE;
+}
+
+.votes, .no-rating {
+  color: #6F757C;
+}
+
+.popular-btn {
+  background-color: #f6c768;
+  color: #1b1d1f;
+  font-size: 0.625rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.price {
+  background-color: #bee3cc;
+  color: #111315;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.sold-out {
+  color: #ed735d;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding-bottom: 0.75em;
+}
+
+.container {
+  padding: 2em;
+  width: 35rem;
+  max-width: 75%;
+  margin-inline: auto;
+  background-color: #1C1D1F;
+  margin-top: 4em;
+  border-radius: 1em;
+  background-image: url(./assets/vector.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.btn-container {
+  margin-block: 2em;
+  text-align: center;
+}
+
+.img-container {
+  position: relative;
+}
+
+.heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    min-width: 35rem;
+  }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 1.5em;
+    row-gap: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 80%;
+    min-width: 56rem;
+  }
+
+  .products-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .bottom-row {
+    margin-top: 1em;
+  }
+}
